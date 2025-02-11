@@ -14,6 +14,7 @@ abstract class OpModeBase: OpMode() {
 
     override fun init() {
         robot = Robot(telemetry, hardwareMap)
+        robot.init()
 
         driver = GamepadEx(gamepad1)
         gunner = GamepadEx(gamepad2)

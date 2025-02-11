@@ -47,7 +47,7 @@ class Robot(
         }
 
         // subsystems
-
+        drive = MecanumDrive(fl,fr,bl,br)
     }
 
     fun update() {
