@@ -4,6 +4,7 @@ import com.arcrobotics.ftclib.hardware.motors.CRServo
 import com.qualcomm.robotcore.eventloop.opmode.OpMode
 import com.qualcomm.robotcore.hardware.DcMotor
 import com.qualcomm.robotcore.hardware.DcMotorEx
+import com.qualcomm.robotcore.hardware.DcMotorSimple
 import com.qualcomm.robotcore.hardware.HardwareMap
 import com.qualcomm.robotcore.hardware.Servo
 import org.firstinspires.ftc.robotcore.external.Telemetry
@@ -35,6 +36,9 @@ class Robot(
         fr = motor("fr")
         bl = motor("bl")
         br = motor("br")
+
+        fr.direction = DcMotorSimple.Direction.REVERSE
+        br.direction = DcMotorSimple.Direction.REVERSE
 
         motors = Arrays.asList<DcMotorEx>(fl, bl, br, fr)
 
