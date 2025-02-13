@@ -23,9 +23,9 @@ class MecanumDrive(
         val r = hypot(-strafePower, forwardPower)
         val robotAngle = atan2(forwardPower, -strafePower) + Math.PI / 4
 
-        val flP = r * cos(robotAngle) + turnSpeed
+        val flP = r * cos(robotAngle) - turnSpeed
         val frP = r * sin(robotAngle) - turnSpeed
-        val brP = r * cos(robotAngle) - turnSpeed
+        val brP = r * cos(robotAngle) + turnSpeed
         val blP = r * sin(robotAngle) + turnSpeed
 
         frontLeft.power = flP
